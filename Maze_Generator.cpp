@@ -31,7 +31,7 @@ bool IsValid(int x, int y) {
     return x > 0 && x < height && y > 0 && y < width;
 }
 
-// Zastosowanie metody Recursive Backtracking do generowanie ścieżek labiryntu
+// Zastosowanie metody Recursive Backtracking do generowania ścieżek labiryntu
 void RecursiveBacktracking(int x, int y) {
     grid[x][y] = ' ';
 
@@ -79,8 +79,8 @@ int main() {
 
     // Generowanie ścieżki
     RecursiveBacktracking(startX, startY); 
-    grid[startX][startY] = 'S';
-    grid[height - 2][width - 2] = 'E';
+    grid[startX][startY] = 'S'; // Zaznaczenie początku
+    grid[height - 2][width - 2] = 'E'; // Zaznaczenie końca
 
     // Rysowanie labiryntu
     PrintGrid();
